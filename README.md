@@ -1,1 +1,1 @@
-Tip calculator program
+Tip calculator program. It calculates tips!
