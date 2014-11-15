@@ -1,4 +1,12 @@
 #tip2.rb
+
+puts "How much is your bill?"
+
+amount = gets.chomp.to_f
+
+puts "How much would you like to tip?"
+tip_amount = gets.chomp.to_f
+
 class Bill
  attr_reader :amount, :total
  attr_accessor :tip
@@ -7,7 +15,7 @@ class Bill
  	end
 
  	def tip_percent(tip_percent)
- 		@tip = (@amount * (tip_percent.to_f / 100)).round(2)
+ 		@tip = (@amount * (tip_percent / 100)).round(2)
  	end
 
  	def total_bill
@@ -16,9 +24,10 @@ class Bill
 
 end
 
-bill= Bill.new(20)
-bill.tip_percent(28)
-puts bill.tip
-bill.total_bill
-puts bill.total
+bill= Bill.new(amount)
+#bill= Bill.new(20)
+puts "Your tip should be $#{bill.tip_percent(tip_amount)}"
+# puts bill.tip
+# bill.total_bill
+# puts bill.total
 
