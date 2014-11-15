@@ -1,1 +1,3 @@
-Tip calculator program. It calculates tips! Why are you not working?
+Tip calculator program. It calculates tips!
+
+We got the SSH Keys working!
